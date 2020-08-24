@@ -1,0 +1,140 @@
+.Container{
+    background-color: #554BC7;
+    width:90%;
+    margin:auto;
+    margin-bottom: 1%;
+
+}
+
+
+.Footer{
+    background-color: white;
+    display: inline-block;
+    margin-bottom:1% ;
+    text-align: center;
+    border-radius: 5px;
+
+}
+
+
+.Footer button{
+    font-size:3rem;
+    font-weight: 900;
+    border:none;
+    width:100%;
+    height: 100%;
+    
+    padding:2rem 2.5rem;
+    background: linear-gradient(to right, #33ecff 0%, #1c0b66 70%);
+    background-clip:text; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Footer button:disabled{
+    
+        cursor: not-allowed;
+        transform: scale(1);
+    
+}
+
+.Footer button:hover , .Footer:hover{
+    transform: scale(1.1);
+    
+}
+
+    .Div span{
+        font-size: 1.4rem;
+        font-weight: 800;
+        color:#33ecff;
+        margin: 1rem;
+    }
+    .Div{
+        text-align:center;
+        margin:auto;
+    }
+.Header{
+    padding:1rem;
+    text-align: center;
+    font-weight: 900;
+    font-size:4rem;
+    margin: 1%;
+    color:white;
+    
+}
+
+.Div1{
+    margin:2%;
+    background-color: white;
+    display:inline-block;
+    padding:2rem;
+   
+}
+
+.Div2{
+    margin:2%;
+    background-color: white;
+    padding:2rem;
+    display:inline-block;
+}
+.Layout{
+    text-align:center;
+}
+
+@media(max-width:500px){
+    .Container{
+        width: 100%;
+    }
+}
+
+.Tableone, .Tabletwo{
+    
+    
+    width:100%;
+
+}
+.Tableone{
+    border-bottom: solid 20px #C0BDDD;
+}
+
+
+
+.Rowone:nth-of-type(2n+2) {
+    background-color: #beb0f7;
+
+}
+.Rowtwo:nth-of-type(2n+1){
+    background-color: #8373c0;
+}
+
+.Tableone span , .Tabletwo span{
+    text-transform:uppercase;
+    font-weight: 900;
+    margin-right:0.2rem;
+}
+.Rowone, .Rowtwo{
+    padding:1rem;
+    
+}
+ 
+
+
+    
+
+    @media(max-width: 500px) { 
+      .Tableone,.Tabletwo{
+      font-size: 56.25%;
+      }
+    }
+    @media(max-width: 699px) { 
+      .Tableone,.Tabletwo{
+      font-size: 70%;
+      }
+    }
+   
+    @media(min-width: 700px) { 
+      .Tableone,.Tabletwo{
+      font-size: 100%;
+      }
+    }
+  

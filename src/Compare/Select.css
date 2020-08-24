@@ -1,0 +1,9 @@
+.Select{
+    margin:2rem;
+    border-width:2px;
+}
+
+@media(max-width:600px){
+    .Select, .Select:only-child{
+        width: 70%;
+}}

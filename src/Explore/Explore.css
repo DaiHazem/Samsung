@@ -1,0 +1,123 @@
+.Button{
+    background-color:#554BC7;
+    border:none;
+    padding:0.8rem 1.8rem;
+    font-size:1.2rem;
+    position: absolute;
+    bottom:3%;
+    width:60%;
+    border-radius: 5px;
+    color:white;
+}
+
+.Tab{
+    background-color:#554BC7;
+    border:none;
+    padding:1.2rem 2rem;
+    font-size:3rem;
+    width:60%;
+    clear: both;
+    margin: auto;
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    color:white;
+    margin-bottom: 3%;
+}
+
+.Wrap{
+    text-align:center;
+}
+
+
+
+
+.Img{
+    object-fit: cover;
+    display: block;
+    height:100%;
+    width:100%;
+
+}
+
+.Div:nth-of-type(2n+2){
+    background-color: #A08DEC;
+
+}
+.Div span{
+    text-transform:uppercase;
+    font-weight: 900;
+    margin-right:0.2rem;
+}
+.Div{
+    padding:0.6rem;
+    
+
+    
+    
+}
+.Fig{
+height:150px;
+width:150px;
+}
+.Button:hover ,.Button:active , .Tab:hover, .Tab:active{
+  background-color:   #A08DEC;
+  transform: scale(1.1);
+  border:none;
+}
+
+.Span1{
+    font-weight: 900;
+    font-size:1.7rem;
+    color:#33ecff;
+}
+
+.Span2{
+font-size:1.5rem;
+
+
+}
+.Grid{
+    float:left;
+    margin: 2%;
+    border: 3px solid #C0BDDD;
+    height:34rem;
+    position: relative;
+}
+
+@media(max-width:350px){
+    .Grid{
+        float: none;
+        text-align: center;
+        height:auto;
+    }
+    .Button{
+        position: relative;
+    }
+}
+
+@media(min-width:900px){
+    .Span1{
+        margin-top: 2rem;
+    }
+}
+
+
+@media(max-width: 500px) { 
+    .Div{
+    font-size: 56.25%;
+    }
+  }
+  @media(max-width: 699px) { 
+    .Div{
+    font-size: 70%;
+    }
+  }
+ 
+  @media(min-width: 700px) { 
+    .Div{
+    font-size: 100%;
+    }
+  }
+
+
