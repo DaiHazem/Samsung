@@ -16,6 +16,12 @@
 
 }
 
+.Container figure{
+    height: 150px;
+    width: 150px;
+    margin: auto;
+}
+
 
 .Footer button{
     font-size:3rem;

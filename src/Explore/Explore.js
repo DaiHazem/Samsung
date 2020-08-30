@@ -70,7 +70,7 @@ const explore=(props)=>{
    const outputDevices=props.data.map(el=>{
      
   
-     return( <Aux>
+     return( 
       <Card  className={styleexplore.Grid} style={{ width: '23rem' }}>
       <figure className={styleexplore.Fig}>
       <MainImage className={styleexplore.Img} title={el.DeviceName}/>
@@ -84,10 +84,7 @@ const explore=(props)=>{
          className={styleexplore.Button} >Show more</button>
       </Card.Body>
     </Card>
-    <Modal cancel={cancelHandler}
-    show={show}>
-        {specOutput}
-    </Modal> </Aux>
+     
      )});
 
      
@@ -116,10 +113,17 @@ const explore=(props)=>{
   let tab=( props.toggle? <div className={styleexplore.Wrap}><button id="BTN" className={styleexplore.Tab} onClick={loadHandler}>Load More</button></div>:null
   );
   
-    return (<div id="Card">
+    return ( <Aux>
+    <div id="Card">
     {output}
     {tab}
-      </div>)
+      </div>
+      <Modal cancel={cancelHandler}
+      show={show}>
+          {specOutput}
+      </Modal>
+      
+      </Aux>)
 
      
 

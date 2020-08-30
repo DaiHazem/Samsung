@@ -1,16 +1,39 @@
-import React ,{useState}from "react";
+import React ,{useState, useEffect}from "react";
 import stylecompare from "./Compare.css";
 import {connect} from "react-redux";
 import Selector from "./Select";
-import MainImage from "../assets/Images/Image";
+//import MainImage from "../assets/Images/Image";
 import Modal from "../UI/Modaal/Modaal";
+
 const compare=(props)=>{
   const [show,setShowState]=useState(false);
   const [opened,setOpenState]=useState(false);
- // const [devices,setDeviceState]=useState(null);
-  //const [specs,setSpecsState]=useState(null);
+  const [vari, setVariState]=useState(0);
   const[specoutputone,setSpecOneState]=useState(null);
   const[specoutputtwo,setSpecTwoState]=useState(null);
+  
+  const images=[
+    {id:"1",src:require("../assets/Images/pic.jpg"),alt:"Mobile"},
+    {id:"2",src:require("../assets/Images/pic2.jpg"),alt:"Mobile"}]
+  const imageElement= images.map(({id,src,alt})=><img className={stylecompare.Img} key={id} src={src}  alt={alt} />)
+  let imageOutput=imageElement[vari];
+  
+useEffect(()=>{
+
+  setTimeout(()=>{
+
+    if(vari<1){
+        setVariState(1);
+    }else{
+        setVariState(0);
+    }
+    imageOutput=imageElement[vari];
+
+
+  },5000)
+
+},[vari]);
+
 
  const comparisonHandler=()=>{
   setShowState(true);
@@ -61,15 +84,14 @@ return( <div className={stylecompare.Container}>
         <div className={stylecompare.Div1}>
         <Selector firstcompare={true} />
        <figure>
-       <MainImage className={stylecompare.Img}/>
-
+            {imageOutput}
        </figure><span>Samsung</span>
 
         </div>
         <div className={stylecompare.Div2}>
             <Selector />
             <figure>
-            <MainImage className={stylecompare.Img} />
+            {imageOutput}
 
             </figure><span>Samsung</span>
         </div></div>
